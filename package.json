@@ -1,0 +1,84 @@
+{
+  "name": "react_component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "father build --esm --cjs --umd "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/balabalababala/react_component.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/balabalababala/react_component/issues"
+  },
+  "homepage": "https://github.com/balabalababala/react_component#readme",
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "redux": "^4.0.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "babel-plugin-istanbul": "^5.1.0",
+    "eslint": "^6.6.0",
+    "eslint-config-antife": "^2.0.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-import-resolver-webpack": "^0.11.1",
+    "eslint-plugin-compat": "^3.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-vue": "^5.2.3",
+    "father": "^2.30.13",
+    "husky": "^3.0.3",
+    "less": "3.9.0",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
+    "stylelint": "^12.0.0",
+    "stylelint-config-antife": "^1.0.1",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-declaration-block-no-ignored-properties": "^2.1.0",
+    "stylelint-order": "^3.1.1",
+    "stylelint-prettier": "^1.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,vue}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.less": [
+      "stylelint --fix -s less",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}

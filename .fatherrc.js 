@@ -1,0 +1,11 @@
+export default {
+  entry: 'src/index.js',
+  cssModules: true,
+  cssModules: {
+    generateScopedName: 'foo-bar_[name]__[local]___[hash:base64:5]',
+  },
+  doc: {
+    themeConfig: { mode: 'dark' },
+    base: '/your-repo'
+  },
+}
