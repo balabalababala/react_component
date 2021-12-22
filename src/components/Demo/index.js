@@ -1,3 +1,3 @@
-import demo from "./app.jsx";
+import demo from './app.jsx';
 
 export default demo;

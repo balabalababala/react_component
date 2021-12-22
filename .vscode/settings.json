@@ -1,0 +1,14 @@
+{
+  "editor.formatOnSave": true,
+  "javascript.validate.enable": false,
+  "explorer.confirmDelete": false,
+  "tslint.jsEnable": true,
+  "stylelint.enable": true,
+  "eslint.options": {
+    "extensions": [".js", ".jsx", ".ts", ".tsx", ".vue"]
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "vetur.format.defaultFormatter.html": "prettier" // 更改vetur插件默认配置，vue组件template内的html代码使用prettier格式化
+}

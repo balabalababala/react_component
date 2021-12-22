@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix . --ext .vue,.jsx,.js &&npm run lint:less",
+    "lint:less": "stylelint ./src/components/**/*.jsx --fix && stylelint ./src/components/**/*.less --fix ",
     "build": "father build --esm --cjs --umd "
   },
   "repository": {
